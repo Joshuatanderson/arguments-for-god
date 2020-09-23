@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "planningPoker",
+  "appId": "io.ionic.argumentsForGod",
+  "appName": "Arguments for God",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "build",

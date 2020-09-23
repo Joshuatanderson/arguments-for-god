@@ -15,11 +15,14 @@ import { useLocation } from 'react-router-dom';
 import { archiveOutline, archiveSharp, arrowForwardOutline, arrowForwardSharp, bookmarkOutline, brushOutline, brushSharp, bulbOutline, bulbSharp, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
 import './Menu.css';
 
+import {kalamSyllogism, contingentSyllogism, moralSyllogism, ontologicalSyllogism, teleologicalSyllogism} from "./argumentContent/index"
+
 interface AppPage {
   url: string;
   iosIcon: string;
   mdIcon: string;
   title: string;
+  syllogism: string[],
 }
 
 const appPages: AppPage[] = [
@@ -27,7 +30,8 @@ const appPages: AppPage[] = [
     title: 'Moral',
     url: '/page/Moral',
     iosIcon: heartOutline,
-    mdIcon: heartSharp
+	mdIcon: heartSharp,
+
   },
   {
     title: 'Cosmological',

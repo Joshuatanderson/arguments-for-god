@@ -6,7 +6,7 @@ import './Page.css';
 
 const Page: React.FC = () => {
 
-  const { name } = useParams<{ name: string; }>();
+  const { code } = useParams<{ code: string; }>();
 
   return (
     <IonPage>
@@ -15,17 +15,17 @@ const Page: React.FC = () => {
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>{name}</IonTitle>
+          <IonTitle>{code}</IonTitle>
         </IonToolbar>
       </IonHeader>
 
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">{name}</IonTitle>
+            <IonTitle size="large">{code}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name={name} />
+        <ExploreContainer name={code} />
       </IonContent>
     </IonPage>
   );

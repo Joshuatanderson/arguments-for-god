@@ -10,7 +10,7 @@ import {
 	IonNote,
 } from "@ionic/react";
 
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import {
 	archiveOutline,
@@ -60,7 +60,7 @@ const appPages: AppPage[] = [
 	{
 		title: "Kalam Cosmological",
 		code: "kalamCosmological",
-		url: "/page/kalam-cosmological",
+		url: "/page/kalam",
 		iosIcon: arrowForwardOutline,
 		mdIcon: arrowForwardSharp,
 		syllogism: kalamSyllogism,
@@ -76,7 +76,7 @@ const appPages: AppPage[] = [
 	{
 		title: "Contingent Cosmological",
 		code: "contingentCosmological",
-		url: "/page/contingent-cosmological",
+		url: "/page/contingent",
 		iosIcon: arrowUpOutline,
 		mdIcon: arrowUpSharp,
 		syllogism: contingentSyllogism,

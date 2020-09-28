@@ -51,6 +51,7 @@ interface AppPage {
 	url: string;
 	iosIcon: string;
 	mdIcon: string;
+	code: string;
 	title: string;
 	syllogism: string[];
 }
@@ -58,6 +59,7 @@ interface AppPage {
 const appPages: AppPage[] = [
 	{
 		title: "Kalam Cosmological",
+		code: "kalamCosmological",
 		url: "/page/kalam-cosmological",
 		iosIcon: arrowForwardOutline,
 		mdIcon: arrowForwardSharp,
@@ -65,13 +67,15 @@ const appPages: AppPage[] = [
 	},
 	{
 		title: "Moral",
-		url: "/page/Moral",
+		code: "moral",
+		url: "/page/moral",
 		iosIcon: heartHalfOutline,
 		mdIcon: heartHalfSharp,
 		syllogism: moralSyllogism,
 	},
 	{
 		title: "Contingent Cosmological",
+		code: "contingentCosmological",
 		url: "/page/contingent-cosmological",
 		iosIcon: arrowUpOutline,
 		mdIcon: arrowUpSharp,
@@ -79,14 +83,16 @@ const appPages: AppPage[] = [
 	},
 	{
 		title: "Teleological",
-		url: "/page/Teleological",
+		code: "teleological",
+		url: "/page/teleological",
 		iosIcon: brushOutline,
 		mdIcon: brushSharp,
 		syllogism: teleologicalSyllogism,
 	},
 	{
 		title: "Ontological",
-		url: "/page/Ontological",
+		code: "ontological",
+		url: "/page/ontological",
 		iosIcon: bulbOutline,
 		mdIcon: bulbSharp,
 		syllogism: ontologicalSyllogism,

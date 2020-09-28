@@ -35,7 +35,7 @@ const App: React.FC = () => {
 						<Menu />
 						<IonRouterOutlet id="main">
 							<Route path="/page/:code" component={Page} exact />
-							<Redirect from="/" to="/page/Inbox" exact />
+							<Redirect from="/" to="/page/kalam" exact />
 						</IonRouterOutlet>
 					</IonSplitPane>
 				</IonReactRouter>

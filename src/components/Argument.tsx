@@ -38,7 +38,7 @@ const Argument: React.FC<ContainerProps> = ({ name }: ContainerProps) => {
 					})
 				);
 		}
-	}, [name]);
+	}, [name, db]);
 
 	const createSyllogism = (syllogism: string[]) => {
 		console.log(syllogism);
@@ -62,7 +62,7 @@ const Argument: React.FC<ContainerProps> = ({ name }: ContainerProps) => {
 			<IonCard>
 				<IonCardHeader>
 					<IonCardTitle>{name}</IonCardTitle>
-					<IonCardSubtitle></IonCardSubtitle>
+					<IonCardSubtitle>{data?.subtitle}</IonCardSubtitle>
 				</IonCardHeader>
 				<IonCardContent>
 					{data && createSyllogism(data.syllogism)}

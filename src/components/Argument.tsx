@@ -49,7 +49,9 @@ const Argument: React.FC<ContainerProps> = ({ name }: ContainerProps) => {
 		for (let i = 0; i < syllogism.length; i++) {
 			points.push(
 				// <Fragment }>
-				<IonItem key={`syllogism-${i}`}>{syllogism[i]}</IonItem>
+				<IonItem key={`syllogism-${i}`}>
+					{i + 1}. {syllogism[i]}
+				</IonItem>
 				// {/* </Fragment> */}
 			);
 		}

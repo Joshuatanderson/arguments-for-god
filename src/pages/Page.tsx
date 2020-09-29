@@ -1,33 +1,37 @@
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import React from 'react';
-import { useParams } from 'react-router';
-import Argument from '../components/Argument';
+import {
+	IonButtons,
+	IonContent,
+	IonHeader,
+	IonIcon,
+	IonMenuButton,
+	IonPage,
+	IonTitle,
+	IonToolbar,
+	IonButton
+} from "@ionic/react";
+import { sunnyOutline, sunnySharp } from "ionicons/icons";
+import React from "react";
+import { useParams } from "react-router";
+import Argument from "../components/argument/Argument";
 
-const Page: React.FC = () => {
 
-  const { code } = useParams<{ code: string; }>();
+const Page = () => {
+	const { code } = useParams<{ code: string }>();
 
-  return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
-          <IonTitle>Arguments for God</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+	return (
+		<IonPage>
+			
 
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">{code}</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <Argument name={code} />
-      </IonContent>
-    </IonPage>
-  );
+			<IonContent fullscreen>
+				<IonHeader collapse="condense">
+					<IonToolbar>
+						<IonTitle size="large">{code}</IonTitle>
+					</IonToolbar>
+				</IonHeader>
+				<Argument name={code} />
+			</IonContent>
+		</IonPage>
+	);
 };
 
 export default Page;

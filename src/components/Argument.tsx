@@ -14,7 +14,7 @@ import {
 } from "@ionic/react";
 import React, { useState, useContext, useEffect, Fragment } from "react";
 import { useLocation } from "react-router-dom";
-import "./Argument.css";
+import "./Argument.scss";
 import firebaseContext from "../contexts/firebase";
 
 interface ContainerProps {

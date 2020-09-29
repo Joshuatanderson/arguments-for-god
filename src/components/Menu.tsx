@@ -10,34 +10,21 @@ import {
 	IonNote,
 } from "@ionic/react";
 
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
 import {
-	archiveOutline,
-	archiveSharp,
 	arrowForwardOutline,
 	arrowForwardSharp,
 	arrowUpOutline,
 	arrowUpSharp,
-	bookmarkOutline,
 	brushOutline,
 	brushSharp,
 	bulbOutline,
 	bulbSharp,
 	heartHalfOutline,
 	heartHalfSharp,
-	heartOutline,
-	heartSharp,
-	mailOutline,
-	mailSharp,
-	paperPlaneOutline,
-	paperPlaneSharp,
-	trashOutline,
-	trashSharp,
-	warningOutline,
-	warningSharp,
 } from "ionicons/icons";
-import "./Menu.css";
+import "./Menu.scss";
 
 import {
 	kalamSyllogism,

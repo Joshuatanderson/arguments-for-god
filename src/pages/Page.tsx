@@ -1,8 +1,7 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
 import { useParams } from 'react-router';
-import ExploreContainer from '../components/Argument';
-import './Page.css';
+import Argument from '../components/Argument';
 
 const Page: React.FC = () => {
 
@@ -15,7 +14,7 @@ const Page: React.FC = () => {
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>{code}</IonTitle>
+          <IonTitle>Arguments for God</IonTitle>
         </IonToolbar>
       </IonHeader>
 
@@ -25,7 +24,7 @@ const Page: React.FC = () => {
             <IonTitle size="large">{code}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name={code} />
+        <Argument name={code} />
       </IonContent>
     </IonPage>
   );

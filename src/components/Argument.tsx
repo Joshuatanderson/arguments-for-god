@@ -4,7 +4,13 @@ import {
 	IonCardHeader,
 	IonCardSubtitle,
 	IonCardTitle,
+	IonGrid,
+	IonHeader,
 	IonText,
+	IonCol,
+	IonRow,
+	IonList,
+	IonItem,
 } from "@ionic/react";
 import React, { useState, useContext, useEffect, Fragment } from "react";
 import { useLocation } from "react-router-dom";
@@ -45,30 +51,54 @@ const Argument: React.FC<ContainerProps> = ({ name }: ContainerProps) => {
 		const points = [];
 		for (let i = 0; i < syllogism.length; i++) {
 			points.push(
-				<Fragment key={`syllogism-${i}`}>
-					<IonText>
-						{i + 1}. {syllogism[i]}
-					</IonText>{" "}
-					<br />
-				</Fragment>
+				// <Fragment }>
+				<IonItem key={`syllogism-${i}`}>{syllogism[i]}</IonItem>
+				// {/* </Fragment> */}
 			);
 		}
 
 		return points;
 	};
+	function titleCase(str: string) {
+		return str
+			.split(" ")
+			.map(function (val) {
+				return val.charAt(0).toUpperCase() + val.substr(1).toLowerCase();
+			})
+			.join(" ");
+	}
 
 	return (
-		<div className="container">
-			<IonCard>
+		/* <IonCard>
 				<IonCardHeader>
-					<IonCardTitle>{name}</IonCardTitle>
-					<IonCardSubtitle>{data?.subtitle}</IonCardSubtitle>
+					<IonCardTitle>
+						<h1>{name}</h1>
+					</IonCardTitle>
+					<IonCardSubtitle>
+						<h2>{data?.subtitle}</h2>
+					</IonCardSubtitle>
 				</IonCardHeader>
 				<IonCardContent>
 					{data && createSyllogism(data.syllogism)}
 				</IonCardContent>
-			</IonCard>
-		</div>
+			</IonCard> */
+		<IonGrid>
+			<IonRow>
+				<IonCol>
+					<IonText>
+						<h1>{titleCase(name)}</h1>
+					</IonText>
+					<IonText>
+						<h5>{data?.subtitle}</h5>
+					</IonText>
+				</IonCol>
+			</IonRow>
+			<IonRow>
+				<IonCol>
+					<IonList>{data && createSyllogism(data.syllogism)}</IonList>
+				</IonCol>
+			</IonRow>
+		</IonGrid>
 	);
 };
 
